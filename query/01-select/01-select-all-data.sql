@@ -1,6 +1,6 @@
 /*
  * Select implementation in PostgreSQL
- * */
+ */
 
 -- Select All data from table
 SELECT *
@@ -22,4 +22,16 @@ from departments;
 -- Escape character
 select department_name || E'\n' || department_id 
 from departments;
+
+-- Eliminate duplicate rows (DISTINCT)
+-- Distinct
+select distinct (job_id, manager_id),
+	   job_id,
+	   manager_id
+from employees;
+-- Distinct on
+select distinct on (job_id, department_id) 
+	   job_id, 
+	   department_id
+from employees;
 
