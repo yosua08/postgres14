@@ -1,0 +1,11 @@
+"employee_id","first_name","last_name","email","phone_number","job_id","salary","commission_pct","manager_id","department_id"
+100,"Yosua","Pratama","SKING","515.123.4567","AD_PRES","24000.00",NULL,NULL,90
+101,"Neena","Kochhar","NKOCHHAR","515.123.4568","AD_VP","17000.00",NULL,100,90
+102,"Lex","De Haan","LDEHAAN","515.123.4569","AD_VP","17000.00",NULL,100,90
+145,"John","Russell","JRUSSEL","011.44.1344.429268","SA_MAN","14000.00","0.40",100,80
+146,"Karen","Partners","KPARTNER","011.44.1344.467268","SA_MAN","13500.00","0.30",100,80
+201,"Michael","Hartstein","MHARTSTE","515.123.5555","MK_MAN","13000.00",NULL,100,20
+147,"Alberto","Errazuriz","AERRAZUR","011.44.1344.429278","SA_MAN","12000.00","0.30",100,80
+108,"Nancy","Greenberg","NGREENBE","515.124.4569","FI_MGR","12000.00",NULL,101,100
+205,"Shelley","Higgins","SHIGGINS","515.123.8080","AC_MGR","12000.00",NULL,101,110
+168,"Lisa","Ozer","LOZER","011.44.1343.929268","SA_REP","11500.00","0.25",148,80
