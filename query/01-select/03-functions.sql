@@ -37,3 +37,14 @@ select coalesce(null, 'data1', 'data2') as return_data1,
 		   coalesce(commission_pct, 0),
 		   salary * coalesce(commission_pct, 0) as bonus
 	from employees;
+	
+-- Formating functions
+select to_char(100000, '999,999.00'),
+	   to_char(1234, 'RN'),
+	   to_char(current_timestamp, 'DD/MON/YYYY HH:MI:SS'),
+	   to_number('10,000,000', '999,999,999');
+	   
+select employee_id,
+	   to_char(salary, '$L999,999') as gaji,
+	   to_char(coalesce(commission_pct, 0) * 100, '999%') as komisi
+from employees;
