@@ -37,3 +37,34 @@ select department_id, job_id,
 from employees
 group by department_id, job_id
 order by job_id;
+
+-- Having clause
+select job_id,
+	   count(*) as employee_by_job,
+	   sum(salary) as employee_salary_by_job
+from employees
+group by job_id
+having count(*) >= 5 and max(salary) >= 10000;
+
+-- Having and where clause
+select job_id,
+	   count(*) employee_by_jobs,
+	   sum(salary) as employee_salary_by_job
+from employees
+where job_id in ('FI_ACCOUNT', 'SA_MAN', 'IT_PROG', 'HR_REP')
+group by job_id 
+having count(*) >= 5;
+
+-- Multiple group by clause 
+select department_id, job_id,
+	   count(*) as employee_by_job,
+	   sum(salary) as employee_salary_by_job
+from employees
+group by grouping sets (department_id, job_id);
+
+select department_id, job_id,
+	   count(*) as employee_by_job,
+	   sum(salary) as employee_salary_by_job
+from employees
+group by grouping sets (department_id, job_id, (department_id, job_id));
+
