@@ -43,3 +43,48 @@ from employees emp
 	 inner join jobs job on (emp.job_id = job.job_id)
 	 inner join departments dep on (emp.department_id = dep.department_id);
 	 
+-- Left right outer join
+select emp.employee_id,
+	   emp.first_name,
+	   dep.department_id,
+	   dep.department_name 
+from employees emp 
+	 right join departments dep on (emp.department_id = dep.department_id);
+	 
+-- Full outer join
+select emp.employee_id,
+	   emp.first_name,
+	   dep.department_id,
+	   dep.department_name 
+from employees emp 
+	 full join departments dep on (emp.department_id = dep.department_id);
+	 
+-- Self join
+select emp.employee_id as employee_id,
+	   emp.first_name as employee_name,
+	   man.employee_id as manager_id,
+	   man.first_name as manager_name
+from employees emp
+	 join employees man on (emp.manager_id = man.employee_id);
+	 
+-- Join condition expression
+select emp.employee_id,
+	   emp.first_name,
+	   dep.department_id,
+	   dep.department_name 
+from employees emp
+	 join departments dep on (emp.department_id = dep.department_id);
+	 
+select emp.employee_id,
+	   emp.first_name,
+	   dep.department_id,
+	   dep.department_name 
+from employees emp
+	 join departments dep using (department_id);
+	 
+select emp.employee_id,
+	   emp.first_name,
+	   dep.department_id,
+	   dep.department_name 
+from employees emp, departments dep
+where emp.department_id = dep.department_id;
